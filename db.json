@@ -1,0 +1,418 @@
+{
+  "user": {
+    "id": "usr_88234",
+    "email": "developer@example.com",
+    "name": "John Doe",
+    "defaultProjectId": "6732bc1db9d78ae51416ebx9"
+  },
+  "projects": [
+    {
+      "id": "6732bc1db9d78ae51416ebb1",
+      "name": "Auto Generated",
+      "apiKey": "6c90d979-558b-4bb7-952b-ae1436b72fc2",
+      "status": "Active",
+      "createdAt": "2024-11-12T10:00:00Z",
+      "configuration": {
+        "recording": {
+          "enabled": true,
+          "mode": "video-and-audio",
+          "layout": "GRID",
+          "priority": "SPEAKER"
+        },
+        "hls": {
+          "enabled": true,
+          "autoStart": false,
+          "quality": "med"
+        },
+        "sip": {
+          "enabled": true,
+          "username": "sumitso5726"
+        },
+        "transcription": {
+          "enabled": false
+        }
+      },
+      "roomLimits": {
+        "maxParticipants": 50,
+        "maxViewersHls": 200,
+        "maxActiveSpeakers": 15
+      }
+    },
+    {
+      "id": "6732bc1db9d78ae51416ebx9",
+      "name": "Healthcare App",
+      "apiKey": "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+      "status": "Active",
+      "createdAt": "2024-12-01T12:00:00Z",
+      "configuration": {
+        "recording": {
+          "enabled": false
+        },
+        "hls": {
+          "enabled": false
+        },
+        "sip": {
+          "enabled": false
+        },
+        "transcription": {
+          "enabled": true
+        }
+      },
+      "roomLimits": {
+        "maxParticipants": 100,
+        "maxViewersHls": 500,
+        "maxActiveSpeakers": 20
+      }
+    }
+  ],
+  "agents": [
+    {
+      "id": "8823ac12-b345-4cde-9f01-234567890b12",
+      "name": "Healthcare Bot",
+      "projectId": "6732bc1db9d78ae51416ebx9",
+      "image": "asdfasdf",
+      "currentTag": "v2.4",
+      "status": "Active",
+      "health": "Healthy",
+      "resourceProfile": "cpu-small",
+      "replicas": {
+        "min": 1,
+        "max": 5
+      },
+      "config": {
+        "port": 8080,
+        "envVars": [
+          {
+            "key": "API_URL",
+            "value": "https://api.example.com"
+          },
+          {
+            "key": "DEBUG",
+            "value": "false"
+          }
+        ]
+      },
+      "versions": [
+        {
+          "tag": "v2.4",
+          "image": "asdfasdf",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T09:01:02.174Z"
+        },
+        {
+          "tag": "",
+          "image": "",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:50:04.593Z"
+        },
+        {
+          "tag": "v2.1-canary",
+          "image": "sumitso/agent:v2.1",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:49:58.177Z"
+        },
+        {
+          "tag": "",
+          "image": "",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:49:43.164Z"
+        },
+        {
+          "tag": "v2.1",
+          "image": "sumitso/agent:v2.1",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:34:09.273Z"
+        },
+        {
+          "tag": "v2.1",
+          "image": "sumitso/my-agent:v2.1",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:34:07.790Z"
+        },
+        {
+          "tag": "v2.1",
+          "image": "sumitso/agent:v2.1",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2025-12-23T08:22:09.582Z"
+        },
+        {
+          "tag": "v1.0",
+          "image": "sumitso/my-agent:v1.0",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2024-12-01T10:00:00Z"
+        },
+        {
+          "tag": "v1.1",
+          "image": "sumitso/my-agent:v1.1",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2024-12-10T14:20:00Z"
+        },
+        {
+          "tag": "v1.2",
+          "image": "sumitso/my-agent:v1.2",
+          "resourceProfile": "cpu-medium",
+          "replicas": 2,
+          "createdAt": "2024-12-15T09:00:00Z"
+        },
+        {
+          "tag": "v2.0",
+          "image": "sumitso/my-agent:v2.0",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2024-12-23T09:30:00Z"
+        }
+      ],
+      "traffic": {
+        "activeSessions": 3,
+        "totalSessions": 10
+      },
+      "trafficStickiness": "session_id",
+      "branches": [
+        {
+          "id": "br_1766480079523",
+          "name": "canary",
+          "image": "asdfasdf",
+          "version": "v2.2",
+          "resourceProfile": "cpu-small",
+          "replicas": {
+            "min": 1,
+            "max": 5
+          },
+          "status": "Healthy",
+          "health": "Healthy",
+          "trafficWeight": 34,
+          "activeSessions": 0,
+          "createdAt": "2025-12-23T08:54:39.523Z"
+        },
+        {
+          "id": "br_1766480118857",
+          "name": "canary-pro",
+          "image": "asdfasdf",
+          "version": "v2.3",
+          "resourceProfile": "cpu-small",
+          "replicas": {
+            "min": 1,
+            "max": 5
+          },
+          "status": "Healthy",
+          "health": "Healthy",
+          "trafficWeight": 32,
+          "activeSessions": 0,
+          "createdAt": "2025-12-23T08:55:18.857Z"
+        }
+      ],
+      "lastUpdated": "2025-12-23T09:01:02.174Z"
+    },
+    {
+      "id": "9912bd34-c567-4def-8901-234567890c34",
+      "name": "Recording Worker",
+      "projectId": "6732bc1db9d78ae51416ebb1",
+      "image": "videosdk/rec:v1.2",
+      "currentTag": "v1.2",
+      "status": "Active",
+      "health": "Healthy",
+      "resourceProfile": "cpu-medium",
+      "replicas": {
+        "min": 2,
+        "max": 10,
+        "current": 4
+      },
+      "config": {
+        "port": 9000,
+        "envVars": []
+      },
+      "trafficStickiness": "session_id",
+      "branches": [],
+      "versions": [
+        {
+          "tag": "v0.9-beta",
+          "image": "videosdk/rec:v0.9-beta",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2024-12-15T10:00:00Z"
+        },
+        {
+          "tag": "v1.0",
+          "image": "videosdk/rec:v1.0",
+          "resourceProfile": "cpu-small",
+          "replicas": 2,
+          "createdAt": "2024-12-20T15:45:00Z"
+        },
+        {
+          "tag": "v1.1",
+          "image": "videosdk/rec:v1.1",
+          "resourceProfile": "cpu-medium",
+          "replicas": 2,
+          "createdAt": "2024-12-21T10:00:00Z"
+        },
+        {
+          "tag": "v1.2",
+          "image": "videosdk/rec:v1.2",
+          "resourceProfile": "cpu-medium",
+          "replicas": 4,
+          "createdAt": "2024-12-22T18:30:00Z"
+        }
+      ],
+      "traffic": {
+        "activeSessions": 12,
+        "totalSessions": 150
+      },
+      "lastUpdated": "2024-12-22T18:30:00Z"
+    },
+    {
+      "id": "7723ac12-d456-4cde-9f01-234567890d56",
+      "name": "Customer Support AI",
+      "projectId": "6732bc1db9d78ae51416ebx9",
+      "image": "sumitso/support-bot:v1.5",
+      "currentTag": "v1.5",
+      "status": "Stopped",
+      "health": "Healthy",
+      "resourceProfile": "cpu-small",
+      "replicas": {
+        "min": 1,
+        "max": 3,
+        "current": 0
+      },
+      "config": {
+        "port": 8081,
+        "envVars": []
+      },
+      "trafficStickiness": "session_id",
+      "branches": [],
+      "versions": [
+        {
+          "tag": "v1.5",
+          "image": "sumitso/support-bot:v1.5",
+          "resourceProfile": "cpu-small",
+          "replicas": 1,
+          "createdAt": "2024-12-15T14:20:00Z"
+        }
+      ],
+      "traffic": {
+        "activeSessions": 0,
+        "totalSessions": 45
+      },
+      "lastUpdated": "2024-12-15T14:20:00Z"
+    },
+    {
+      "id": "6623ac12-e567-4cde-9f01-234567890e78",
+      "name": "Sales Assistant",
+      "projectId": "6732bc1db9d78ae51416ebb1",
+      "image": "sumitso/sales-bot:v1.0",
+      "currentTag": "v1.0",
+      "status": "Active",
+      "health": "Healthy",
+      "resourceProfile": "cpu-medium",
+      "replicas": {
+        "min": 1,
+        "max": 2,
+        "current": 1
+      },
+      "config": {
+        "port": 8082,
+        "envVars": []
+      },
+      "trafficStickiness": "session_id",
+      "branches": [],
+      "versions": [
+        {
+          "tag": "v1.0",
+          "image": "sumitso/sales-bot:v1.0",
+          "resourceProfile": "cpu-medium",
+          "replicas": 1,
+          "createdAt": "2024-12-20T11:00:00Z"
+        }
+      ],
+      "traffic": {
+        "activeSessions": 5,
+        "totalSessions": 80
+      },
+      "lastUpdated": "2024-12-20T11:00:00Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "8a93774e-caa0-4cd8-9c63-f2771b031b74",
+      "agentId": "8823ac12-b345-4cde-9f01-234567890b12",
+      "status": "Active",
+      "duration": "12m 30s",
+      "startedAt": "2025-06-18T11:16:10Z",
+      "endedAt": null,
+      "metadata": {
+        "campaign": "Q3",
+        "jobId": "12345"
+      },
+      "meetingId": "abcd-1234-xyzw",
+      "participantId": "z7s8d9f0g1"
+    },
+    {
+      "id": "7b82665a-d123-4e56-b789-f01234567a12",
+      "agentId": "8823ac12-b345-4cde-9f01-234567890b12",
+      "status": "Completed",
+      "duration": "45m 10s",
+      "startedAt": "2025-06-18T10:05:00Z",
+      "endedAt": "2025-06-18T10:50:10Z",
+      "metadata": {
+        "campaign": "Q3"
+      }
+    }
+  ],
+  "logs": [
+    {
+      "sessionId": "8a93774e-caa0-4cd8-9c63-f2771b031b74",
+      "lines": [
+        "[INFO] Agent initializing...",
+        "[INFO] Connected to Meeting Room",
+        "[DEBUG] Audio Transport: SRTP",
+        "[INFO] Vad: Voice detected",
+        "[INFO] LLM: Generating response..."
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "id": "774c768e-1234-4567-8901-234567890cfb",
+      "name": "realtime-openai",
+      "type": "REALTIME",
+      "provider": "OpenAI",
+      "config": {
+        "apiKeyLast4": "hjkl"
+      }
+    },
+    {
+      "id": "881a2233-4455-6677-8899-00aabbccddee",
+      "name": "elevenlabs-tts",
+      "type": "TTS",
+      "provider": "ElevenLabs",
+      "config": {
+        "apiKeyLast4": "a9z1"
+      }
+    }
+  ],
+  "secrets": [
+    {
+      "id": "sec_12345",
+      "name": "DOCKER_HUB_CREDENTIALS",
+      "type": "image-pull",
+      "value": "********",
+      "createdAt": "2024-12-20T10:00:00Z"
+    }
+  ],
+  "globalConfig": [
+    {
+      "key": "DOCKER_HUB_CREDENTIALS",
+      "value": "asdfasdf;lkasd;fkj",
+      "usage": "Global",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* VideoSDK Core Palette */
+  --color-vsdk-bg: #050505;
+  --color-vsdk-sidebar: #0F1014;
+  --color-vsdk-card: #131417;
+  --color-vsdk-border: #26272B;
+  --color-vsdk-primary: #CDB6FF;
+  --color-vsdk-primary-hover: #B496F0;
+
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Legacy/Custom */
+  --color-customGray-100: #2d2d2d;
+  --color-customGray-200: #3d3d3d;
+  --color-purple-350: #a855f7;
+}
+
+@layer base {
+  body {
+    @apply bg-vsdk-bg text-white antialiased;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
