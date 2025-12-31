@@ -1,4 +1,4 @@
-const BASE_URL = "http://0.0.0.0:3005";
+const BASE_URL = "https://test-deployments-agentcloud-production.up.railway.app";
 
 export const api = {
   getProjects: () => fetch(`${BASE_URL}/projects`).then((res) => res.json()),
